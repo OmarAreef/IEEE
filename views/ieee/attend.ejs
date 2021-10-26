@@ -1,0 +1,45 @@
+<% layout('layout/boilerplate.ejs') %>
+    <h2 class="display-2">Please fill in the form to attend</h2>
+    <form method="POST">
+        <div class="mb-3 row">
+            <div class="col-6">
+                <label for="exampleInputEmail1" class="form-label pb-2">Email address</label>
+                <input type="email" class="form-control py-3" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            </div>
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+        <div class="row justify-content-start mb-3">
+            <div class="col-4">
+                <label for="exampleInputPassword1" class="form-label pb-2">Mobile number</label>
+                <input type="number" class="form-control" id="exampleInputPassword1" required>
+            </div>
+            <div class="col-3">
+                <label for="selectC" class="form-label pb-2">Select committee</label>
+                <select class="form-select rounded-5 border border-2 py-2 pr-3" aria-label="Default select example"
+                    id='selectC'>
+                    <option selected>Organisation</option>
+                    <option value="1">Technical</option>
+                </select>
+            </div>
+        </div>
+        <div class="row justify-content-even">
+            <div class="col-2">
+                <label for="selectE" class="form-label pb-2">Type of Event</label>
+                <select class="form-select-lg mb-3 py-2 px-1 d-block justify-content-center"
+                    aria-label=".form-select-lg example" id='selectE' required>
+                    <option value="1">Technical</option>
+                    <option value="2">None-Technical</option>
+                </select>
+            </div>
+            <div class="col-3" id='newSelect'>
+            </div>
+        </div>
+        <div id="emailHelp" class="form-text">Hint: select one type of the event in order for the event list to show.</div>
+        <div class="row justify-content-center">
+            <div class="col-3 offset-1">
+                <button type="submit" class="btn btn-outline-light">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="/JS/attend.js"></script>
